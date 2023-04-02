@@ -1,0 +1,49 @@
+<button class="right-corner" onclick="openNav()">
+         <p style="color:white;font-size:35px;padding:0;margin:0;height:0px;width:30px;">≡</p>
+         <!--<img src="/img/close.png" alt="closebtn" width="16px"-->
+         <!-- />-->
+        </button>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            ><p style="padding:0;margin:0;">&Chi;</p></a><?php
+          if (isset($_SESSION['user_id'])) {
+            echo "<a href='/business'>Home</a>";
+		if ($_SESSION['user_name'] === 'zaidanabbas') {
+      echo "<a href='/uploader'>Uploader</a>";
+      
+    } else {
+      echo "";
+    }
+    if ($_SESSION['user_name'] === 'adelmroueh') {
+      echo "<a href='/uploader'>Uploader</a>";
+      
+    } else {
+      echo "";
+    }
+    if ($_SESSION['user_name'] === 'jawadzaidan') {
+      echo "<a href='/uploader'>Uploader</a>";
+      
+    } else {
+      echo "";
+    }
+    if ($_SESSION['user_name'] === 'mahdizaidan') {
+      echo "<a href='/uploader'>Uploader</a>";
+      
+    } else {
+      echo "";
+    }
+
+		echo "
+		<a href='logout.php'>logout</a>";
+	  } else { ?>
+    <a href='/'>Home</a>
+    <a href="/#prices">Our prices</a>
+    <a href="/#projects">Our Projects</a>
+    <a href="/#contact">Contact</a>
+      <!-- <a href="/login/login">Login</a> -->
+      <!-- <a href="/signup">Signup</a> -->
+   <?php }
+	 
+    
+    ?>
+        </div>
